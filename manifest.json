@@ -3,8 +3,13 @@
   "version": "0.1",
   "description": "Similar Tabs",
   "background_page": "similartabs.html",
+  "icons": {
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
   "browser_action": {
-      "default_title": "Similar Tabs"
+      "default_title": "Similar Tabs",
+       "default_icon": "icon_16.png"
   },
   "permissions": [
     "tabs"
