@@ -1,0 +1,12 @@
+{
+  "name": "Similar Tabs",
+  "version": "0.1",
+  "description": "Similar Tabs",
+  "background_page": "similartabs.html",
+  "browser_action": {
+      "default_title": "Similar Tabs"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
