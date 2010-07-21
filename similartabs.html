@@ -2,8 +2,14 @@
     <head>
       <script>
 
-      // returns the hostname with the protocol
-      // from http://beardscratchers.com/journal/using-javascript-to-get-the-hostname-of-a-url
+      /**
+      * Returns the hostname
+      *
+      * from http://beardscratchers.com/journal/using-javascript-to-get-the-hostname-of-a-url
+      *
+      * @param {String} url
+      * @return {String}
+      */
       function getHost(url) {
 
           var re = new RegExp('^(?:f|ht)tp(?:s)?\://([^/]+)', 'im'),
@@ -20,7 +26,11 @@
       }
 
 
-      // gets the url of the current tab
+      /**
+      * Returns the current tab in the curren window
+      *
+      * @param {Function} successHandler
+      */
       function getCurrentTab(successHandler) {
 
           chrome.windows.getCurrent( function (win) {
@@ -30,7 +40,12 @@
           });
       }
 
-      // gets tabs with the specific hostname
+      /**
+      * Returns the tabs that have the same host in the current window
+      *
+      * @param {String} host
+      * @param {Function} successHandler
+      */
       function getTabs(host, successHandler) {
 
           chrome.windows.getCurrent( function (win) {
@@ -48,7 +63,9 @@
 
       }
 
-      // closes the similar (that have the same host) tabs
+      /**
+      * Closes the tabs that have the same host as the current tab in the current window
+      */
       function closeSimilarTabs() {
 
           var tabhost,
@@ -70,7 +87,7 @@
           });
       }
 
-
+      // init
       function init() {
 
           chrome.browserAction.onClicked.addListener( function (tab) {
@@ -78,9 +95,9 @@
           });
       }
 
+
+      init();
+
       </script>
     </head>
-    <body onload="init();">
-
-    </body>
 </html>
