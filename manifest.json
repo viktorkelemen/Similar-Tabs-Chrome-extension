@@ -1,17 +1,22 @@
 {
-  "name": "Close Similar Tabs",
-  "version": "0.1",
-  "description": "Closes the tabs that have the same host as the selected one.",
-  "background_page": "similartabs.html",
-  "icons": {
-      "16": "icon_16.png",
-      "48": "icon_48.png"
-   },
-  "browser_action": {
-      "default_title": "Close similar tabs",
-       "default_icon": "icon_16.png"
-  },
-  "permissions": [
-    "tabs"
-  ]
+	"name": "Close Similar Tabs",
+	"version": "0.2",
+	"manifest_version": 2,
+	"description": "Closes the tabs that have the same host as the selected one.",
+	"icons": {
+		"16": "icon_16.png",
+		"48": "icon_48.png"
+	},
+	"permissions": [
+		"tabs"
+	],
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"similartabs.js"
+		]
+	},
+	"browser_action": {
+		"default_title": "Close Similar Tabs"
+	}
 }
